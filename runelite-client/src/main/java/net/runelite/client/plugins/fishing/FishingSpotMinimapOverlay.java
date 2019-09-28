@@ -62,15 +62,9 @@ class FishingSpotMinimapOverlay extends Overlay
 			return null;
 		}
 
-		NPC[] fishingSpots = plugin.getFishingSpots();
-		if (fishingSpots == null)
+		for (NPC npc : plugin.getFishingSpots())
 		{
-			return null;
-		}
-
-		for (NPC npc : fishingSpots)
-		{
-			FishingSpot spot = FishingSpot.getSPOTS().get(npc.getId());
+			FishingSpot spot = FishingSpot.findSpot(npc.getId());
 
 			if (spot == null)
 			{

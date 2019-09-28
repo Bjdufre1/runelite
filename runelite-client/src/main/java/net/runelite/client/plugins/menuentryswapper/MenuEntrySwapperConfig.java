@@ -93,6 +93,16 @@ public interface MenuEntrySwapperConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = "swapContract",
+		name = "Contract",
+		description = "Swap Talk-to with Contract on Guildmaster Jane"
+	)
+	default boolean swapContract()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		keyName = "swapChase",
 		name = "Chase",
 		description = "Allows to left click your cat to chase"
@@ -112,7 +122,7 @@ public interface MenuEntrySwapperConfig extends Config
 		return true;
 	}
 
-	@ConfigItem(		
+	@ConfigItem(
 		keyName = "swapDarkMage",
 		name = "Repairs",
 		description = "Swap Talk-to with Repairs for Dark Mage"
@@ -153,6 +163,16 @@ public interface MenuEntrySwapperConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = "swapHardWoodGrove",
+		name = "Hardwood Grove",
+		description = "Swap Quick-Pay(100) and Send-Parcel at Hardwood Grove"
+	)
+	default boolean swapHardWoodGrove()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		keyName = "swapHarpoon",
 		name = "Harpoon",
 		description = "Swap Cage, Big Net with Harpoon on Fishing spot"
@@ -173,9 +193,19 @@ public interface MenuEntrySwapperConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = "swapHouseAdvertisement",
+		name = "House Advertisement",
+		description = "Swap View with Add-House or Visit-Last on House Advertisement board"
+	)
+	default HouseAdvertisementMode swapHouseAdvertisement()
+	{
+		return HouseAdvertisementMode.VIEW;
+	}
+
+	@ConfigItem(
 		keyName = "swapPickpocket",
-		name = "Pickpocket on H.A.M.",
-		description = "Swap Talk-to with Pickpocket on H.A.M members"
+		name = "Pickpocket",
+		description = "Swap Talk-to with Pickpocket"
 	)
 	default boolean swapPickpocket()
 	{
@@ -195,9 +225,19 @@ public interface MenuEntrySwapperConfig extends Config
 	@ConfigItem(
 		keyName = "swapPrivate",
 		name = "Private",
-		description = "Swap Shared with Private on the Chamber of Xeric storage units."
+		description = "Swap Shared with Private on the Chambers of Xeric storage units."
 	)
 	default boolean swapPrivate()
+	{
+		return false;
+	}
+
+	@ConfigItem(
+		keyName = "swapPick",
+		name = "Pick",
+		description = "Swap Pick with Pick-lots of the Gourd tree in the Chambers of Xeric"
+	)
+	default boolean swapPick()
 	{
 		return false;
 	}
@@ -258,6 +298,16 @@ public interface MenuEntrySwapperConfig extends Config
 		description = "Swap Talk-to with Travel, Take-boat, Pay-fare, Charter on NPC<br>Example: Squire, Monk of Entrana, Customs officer, Trader Crewmember"
 	)
 	default boolean swapTravel()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "swapEnchant",
+		name = "Enchant",
+		description = "Swap Talk-to with Enchant for Eluned"
+	)
+	default boolean swapEnchant()
 	{
 		return true;
 	}
